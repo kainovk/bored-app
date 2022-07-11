@@ -1,0 +1,5 @@
+server:
+  port: 8081
+
+api:
+  url: http://www.boredapi.com/api/activity
