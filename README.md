@@ -8,6 +8,7 @@
 - **email-sender** sends an email by request
 - **bored-email-service** is a main module. Collects activities from **bored-service** 
 and then sends an email via **email-sender** service
+<<<<<<< HEAD
 
 ### Result example
 
