@@ -1,10 +1,10 @@
 package com.kainovk.emailsenderservice.model;
 
-import lombok.Value;
+import lombok.Data;
 
-@Value
+@Data
 public class EmailRequest {
-    String to;
-    String subject;
-    String text;
+    private String to;
+    private String subject;
+    private String text;
 }

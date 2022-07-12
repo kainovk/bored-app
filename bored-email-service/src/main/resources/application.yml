@@ -1,4 +1,19 @@
 server:
   port: 8080
 
+feign:
+  hystrix:
+    enabled: false
+  okhttp:
+    enabled: true
 
+api:
+  client:
+    url:
+      bored-service: http://localhost:8081
+      email-sender: http://localhost:8082
+
+app:
+  to: ${EMAIL-RECEIVER}
+  crons:
+    at-nine-am-everyday: 0 0 9 * * ?
