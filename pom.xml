@@ -11,6 +11,7 @@
     <modules>
         <module>bored-service</module>
         <module>email-sender</module>
+        <module>bored-email-service</module>
     </modules>
 
     <name>BoredApplication</name>
