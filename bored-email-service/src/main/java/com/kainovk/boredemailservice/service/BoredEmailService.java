@@ -12,7 +12,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Service
@@ -25,17 +24,17 @@ public class BoredEmailService {
     private final EmailSenderClient emailSenderClient;
     private final ApplicationConfig config;
 
-    @Scheduled(fixedDelay = 10_000)
+    @Scheduled(cron = "${app.crons.at-nine-am-everyday}")
     public void sendEmailWithActivities() {
         Set<Activity> activities = new HashSet<>();
-        while(activities.size() < 5) {
+        while (activities.size() < 5) {
             activities.add(boredServiceClient.getRandomActivity());
         }
 
         StringBuilder message = new StringBuilder();
 
         int counter = 0;
-        for(Activity activity : activities){
+        for (Activity activity : activities) {
             counter++;
             message.append(counter).append(". ").append(activity).append("\r\n");
         }

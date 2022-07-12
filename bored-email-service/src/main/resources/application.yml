@@ -15,3 +15,5 @@ api:
 
 app:
   to: ${EMAIL-RECEIVER}
+  crons:
+    at-nine-am-everyday: 0 0 9 * * ?
